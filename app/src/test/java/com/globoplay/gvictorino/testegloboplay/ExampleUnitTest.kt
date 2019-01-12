@@ -1,4 +1,4 @@
-package com.globoplay.gvictorino.teste_globoplay
+package com.globoplay.gvictorino.testegloboplay
 
 import org.junit.Test
 

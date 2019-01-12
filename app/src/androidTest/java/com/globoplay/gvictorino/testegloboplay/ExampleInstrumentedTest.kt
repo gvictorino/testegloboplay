@@ -1,4 +1,4 @@
-package com.globoplay.gvictorino.teste_globoplay
+package com.globoplay.gvictorino.testegloboplay
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
