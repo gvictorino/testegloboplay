@@ -2,15 +2,16 @@ package com.globoplay.gvictorino.domain.programs
 
 import com.globoplay.gvictorino.domain.UseCase
 
-class ProgramUseCase(programContract: ProgramContract) : UseCase<Unit>(),ProgramsCallback {
-    private val programs = programContract
+class ProgramUseCase(private val programContract: ProgramContract) : UseCase<Unit>(),ProgramsCallback {
     private lateinit var callback : ProgramsCallback
+    private lateinit var contract : ProgramContract
 
-    fun with(callback: ProgramsCallback){
-        this.callback = callback
+    fun with(programsCallback: ProgramsCallback): ProgramUseCase {
+        this.callback = programsCallback
+        return this
     }
 
-    override fun onSuccess(programList: List<Program>) {
+    override fun onSuccess(programList: MutableList<Program>) {
         callback.onSuccess(programList)
     }
 
@@ -19,6 +20,7 @@ class ProgramUseCase(programContract: ProgramContract) : UseCase<Unit>(),Program
     }
 
     override fun execute() {
-        programs.getPrograms(this)
+        this.contract = programContract
+        contract.getPrograms(callback)
     }
 }

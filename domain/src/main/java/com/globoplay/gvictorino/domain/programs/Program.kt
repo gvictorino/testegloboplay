@@ -5,6 +5,6 @@ class Program(
     val videoID : Int = 0,
     val programName : String = "",
     val favorites : Int = 0,
-    val duration: Int = 0,
+    val duration: String = "",
     val thumb : String = ""
 )

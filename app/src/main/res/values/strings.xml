@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">teste-globoplay</string>
+    <string name="transitionImage">thumb</string>
 </resources>

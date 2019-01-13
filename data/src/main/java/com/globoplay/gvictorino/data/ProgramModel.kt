@@ -3,12 +3,12 @@ package com.globoplay.gvictorino.data
 import com.google.gson.annotations.SerializedName
 
 data class ProgramModel(
-    @SerializedName("servide_id")
+    @SerializedName("service_id")
     var serviceID: Int,
-    @SerializedName("program_id")
+    @SerializedName("videoId")
     var programID: Int,
     @SerializedName("duration")
-    var duration: Int,
+    var duration: String,
     @SerializedName("description")
     var description: String,
     @SerializedName("favorites")

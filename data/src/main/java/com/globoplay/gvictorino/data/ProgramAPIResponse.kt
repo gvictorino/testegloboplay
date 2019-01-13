@@ -4,5 +4,5 @@ import com.google.gson.annotations.SerializedName
 
 class ProgramAPIResponse {
     @SerializedName("content")
-    var programsList: List<ProgramModel>? = null
+    var programsList: List<ProgramModel> = listOf()
 }
