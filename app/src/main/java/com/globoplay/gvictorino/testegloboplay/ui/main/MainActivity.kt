@@ -10,6 +10,8 @@ import android.widget.ProgressBar
 import com.globoplay.gvictorino.testegloboplay.Navigator
 import com.globoplay.gvictorino.testegloboplay.R
 import com.globoplay.gvictorino.testegloboplay.builders.MainPresenterBuilder
+import android.support.v7.app.AlertDialog
+
 
 class MainActivity : AppCompatActivity(), MainView{
     private lateinit var presenter: MainPresenter
@@ -54,6 +56,12 @@ class MainActivity : AppCompatActivity(), MainView{
 
     override fun showError() {
         progressBar.visibility = View.GONE
+        val alertDialog = AlertDialog.Builder(this@MainActivity).create()
+        alertDialog.setTitle("Ops.. Algo deu errado")
+        alertDialog.setMessage("Verifique sua conexão")
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Tentar novamente"
+        ) { dialog, which -> presenter.onClickTryAgain() }
+        alertDialog.show()
     }
 
     override fun showLoad() {

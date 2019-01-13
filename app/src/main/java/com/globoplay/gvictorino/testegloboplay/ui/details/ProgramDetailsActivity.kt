@@ -1,10 +1,8 @@
 package com.globoplay.gvictorino.testegloboplay.ui.details
 
-import android.app.Activity
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
-import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import com.globoplay.gvictorino.testegloboplay.ImageLoader
@@ -33,7 +31,6 @@ class ProgramDetailsActivity : AppCompatActivity(), ProgramDetailsView{
         val extras = intent.extras
         val programName = extras.getString(PROGRAM_NAME)
 
-
         toolbar = findViewById(R.id.toolbar)
         toolbar.title = programName
         setSupportActionBar(toolbar)
@@ -54,6 +51,8 @@ class ProgramDetailsActivity : AppCompatActivity(), ProgramDetailsView{
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
             toolbar.setNavigationOnClickListener { finish() }
         }
+
+        description.isSelected = true
 
         presenter.onCreateView()
     }
@@ -85,18 +84,7 @@ class ProgramDetailsActivity : AppCompatActivity(), ProgramDetailsView{
 
         favorites.text = programFavorites.toString()
         duration.text = "$programDuration mins"
-
     }
-
-    override fun showLoad() {
-    }
-
-    override fun removeLoad() {
-    }
-
-    override fun showError() {
-    }
-
 
     companion object {
         val PROGRAM_ID = "ProgramID"
