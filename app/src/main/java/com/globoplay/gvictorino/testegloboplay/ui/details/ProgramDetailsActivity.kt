@@ -30,7 +30,12 @@ class ProgramDetailsActivity : AppCompatActivity(), ProgramDetailsView{
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_details)
 
+        val extras = intent.extras
+        val programName = extras.getString(PROGRAM_NAME)
+
+
         toolbar = findViewById(R.id.toolbar)
+        toolbar.title = programName
         setSupportActionBar(toolbar)
 
         description = findViewById(R.id.description)
@@ -56,7 +61,6 @@ class ProgramDetailsActivity : AppCompatActivity(), ProgramDetailsView{
     override fun addProgramDetails() {
         val extras = intent.extras
         val programID = extras.getInt(PROGRAM_ID, 0)
-        val programName = extras.getString(PROGRAM_NAME)
         val programThumb = extras.getString(PROGRAM_THUMB)
         val programServiceID = extras.getInt(PROGRAM_SERVICEID)
         val programVideoID = extras.getInt(PROGRAM_VIDEOID)
@@ -67,7 +71,6 @@ class ProgramDetailsActivity : AppCompatActivity(), ProgramDetailsView{
         val programDuration = extras.getString(PROGRAM_DURATION)
         val programDescription = extras.getString(PROGRAM_DESCRIPTION)
 
-        toolbar.title = programName
         ImageLoader.loadFitCenter(this,programThumb, R.drawable.mosaic_pattern,thumb)
         description.text = programDescription
         programId.text = programID.toString()
