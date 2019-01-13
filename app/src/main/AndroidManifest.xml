@@ -27,8 +27,12 @@
 
         <activity
 			android:name=".ui.main.MainActivity"
-			android:configChanges="orientation|keyboardHidden|screenSize">
+			android:configChanges="orientation|keyboardHidden|screenSize"/>
 
-        </activity>
-    </application>
+
+		<activity
+				android:name=".ui.details.ProgramDetailsActivity"
+				android:configChanges="orientation|keyboardHidden|screenSize"/>
+
+	</application>
 </manifest>

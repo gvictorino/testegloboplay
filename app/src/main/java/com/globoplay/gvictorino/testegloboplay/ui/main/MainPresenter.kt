@@ -11,7 +11,7 @@ class MainPresenter(
 
     private var isPaused = false
     private var mIsLoading = false
-    private var programsList = listOf<Program>()
+    private var programs = listOf<Program>()
 
     fun onCreateView() {
         view.showLoad()
@@ -37,7 +37,7 @@ class MainPresenter(
         if (!isPaused) {
             mIsLoading = false
             view.addProgramsList(programList.map {ProgramViewModelMapper.from(it) }.toMutableList())
-            this.programsList = programsList
+            this.programs = programList
         }
     }
 
@@ -49,7 +49,7 @@ class MainPresenter(
 
     override fun onClickProgram(position: Int, sharedElement: View) {
         if (!isPaused) {
-            val program = programsList[position]
+            val program = programs[position]
             view.goToProgramDetails(program,sharedElement)
         }
     }

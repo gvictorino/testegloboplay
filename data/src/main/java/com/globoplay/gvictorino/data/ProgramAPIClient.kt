@@ -1,6 +1,5 @@
 package com.globoplay.gvictorino.data
 
-import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -16,8 +15,8 @@ class ProgramAPIClient {
         this.apiService = retrofit.create<ProgramAPIService>(ProgramAPIService::class.java)
     }
 
-    fun getPrograms(callback: ProgramAPICallback) {
-        apiService.getPrograms().enqueue(object : Callback<ProgramAPIResponse> {
+    fun getProgramsList(callback: ProgramAPICallback) {
+        apiService.getProgramsList().enqueue(object : Callback<ProgramAPIResponse> {
             override fun onResponse(call: Call<ProgramAPIResponse>, response: Response<ProgramAPIResponse>) {
                 if (response.isSuccessful && response.body() != null)
                     callback.onResponse(response.body() as ProgramAPIResponse)
@@ -28,7 +27,6 @@ class ProgramAPIClient {
                 callback.onFailure(t)
             }
         })
-
     }
 
     companion object {

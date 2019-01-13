@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Build
 import android.support.v4.app.ActivityOptionsCompat
 import android.view.View
+import com.globoplay.gvictorino.testegloboplay.ui.details.ProgramDetailsActivity
 import com.globoplay.gvictorino.testegloboplay.ui.main.MainActivity
 
 class Navigator(var activity: Activity) {

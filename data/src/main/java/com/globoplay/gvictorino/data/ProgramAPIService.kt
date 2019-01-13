@@ -5,5 +5,6 @@ import retrofit2.http.GET
 
 interface ProgramAPIService{
     @GET("videos")
-    fun getPrograms(): Call<ProgramAPIResponse>
+    fun getProgramsList(): Call<ProgramAPIResponse>
+    fun getProgram() : Call<ProgramAPIResponse>
 }

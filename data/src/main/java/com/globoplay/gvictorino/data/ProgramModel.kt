@@ -6,6 +6,8 @@ data class ProgramModel(
     @SerializedName("service_id")
     var serviceID: Int,
     @SerializedName("videoId")
+    var videoID: Int,
+    @SerializedName("programId")
     var programID: Int,
     @SerializedName("duration")
     var duration: String,
