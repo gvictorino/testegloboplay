@@ -14,7 +14,8 @@ class ProgramViewModelMapper{
             fullEpisode = program.fullEpisode,
             serviceID = program.serviceID,
             videoID = program.videoID,
-            programID = program.programID
+            programID = program.programID,
+            description = program.description
        )
     }
 }

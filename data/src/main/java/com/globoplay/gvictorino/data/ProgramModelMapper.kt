@@ -14,6 +14,7 @@ class ProgramModelMapper{
             thumb = programModel.thumb,
             fullEpisode = programModel.fullEpisode,
             kind = programModel.kind,
-            programType = programModel.programType)
+            programType = programModel.programType,
+            description = programModel.description)
     }
 }

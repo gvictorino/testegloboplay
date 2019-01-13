@@ -50,92 +50,101 @@ android:background="@color/colorPrimaryDark">
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
 			android:layout_marginTop="20dp"
-			android:layout_marginLeft="16dp">
+			android:layout_marginLeft="16dp"
+			android:layout_marginRight="16dp">
 
 		<TextView
 			android:id="@+id/descriptionTextView"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:textStyle="bold"
-			android:text="Descrição:"/>
+			android:text="@string/description"/>
 
 		<TextView
 			android:id="@+id/description"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			app:layout_constraintLeft_toRightOf="@id/descriptionTextView"
-			android:layout_marginLeft="5dp"
-			tools:text="blablalablabla"/>
+			android:minLines="2"
+			android:maxLines="3"
+			android:layout_marginLeft="5dp"/>
 
 		<TextView
 			android:id="@+id/durationTextView"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
+			android:layout_marginTop="15dp"
 			app:layout_constraintTop_toBottomOf="@id/descriptionTextView"
 			android:textStyle="bold"
-			android:text="Duração:"/>
+			android:text="@string/duration"/>
 
 		<TextView
 				android:id="@+id/duration"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:layout_marginTop="15dp"
 				app:layout_constraintLeft_toRightOf="@id/durationTextView"
 				app:layout_constraintBottom_toBottomOf="@id/durationTextView"
-				android:layout_marginLeft="5dp"
-				tools:text="blablalablabla"/>
+				android:layout_marginLeft="5dp"/>
 
 		<TextView
 				android:id="@+id/favoritesTextView"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				app:layout_constraintTop_toBottomOf="@id/durationTextView"
+				android:layout_marginTop="10dp"
 				android:textStyle="bold"
-				android:text="Favoritos:"/>
+				android:text="@string/favorites"/>
 		<TextView
 				android:id="@+id/favorites"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
 				app:layout_constraintLeft_toRightOf="@id/favoritesTextView"
 				app:layout_constraintBottom_toBottomOf="@id/favoritesTextView"
-				android:layout_marginLeft="5dp"
-				tools:text="blablalablabla"/>
+				android:layout_marginLeft="5dp"/>
+
 		<TextView
 				android:id="@+id/fullEpisodeTextView"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
 				app:layout_constraintTop_toBottomOf="@id/favoritesTextView"
 				android:textStyle="bold"
-				android:text="Episódio Inteiro:"/>
+				android:text="@string/fullEpisode"/>
 		<TextView
 				android:id="@+id/fullEpisode"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
 				app:layout_constraintLeft_toRightOf="@id/fullEpisodeTextView"
 				app:layout_constraintBottom_toBottomOf="@id/fullEpisodeTextView"
-				android:layout_marginLeft="5dp"
-				tools:text="blablalablabla"/>
+				android:layout_marginLeft="5dp"/>
 		<TextView
 				android:id="@+id/kindTextView"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
 				app:layout_constraintTop_toBottomOf="@id/fullEpisodeTextView"
 				android:textStyle="bold"
-				android:text="Kind:"/>
+				android:text="@string/kind"/>
 		<TextView
 				android:id="@+id/kind"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				app:layout_constraintLeft_toRightOf="@id/kindTextView"
 				app:layout_constraintBottom_toBottomOf="@id/kindTextView"
-				android:layout_marginLeft="5dp"
-				tools:text="blablalablabla"/>
+				android:layout_marginTop="10dp"
+				android:layout_marginLeft="5dp"/>
+
 		<TextView
 				android:id="@+id/programTypeTextView"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
 				app:layout_constraintTop_toBottomOf="@id/kindTextView"
 				android:textStyle="bold"
-				android:text="Tipo de programa:"/>
+				android:text="@string/programType"/>
 		<TextView
 				android:id="@+id/programType"
 				android:layout_width="wrap_content"
@@ -143,52 +152,55 @@ android:background="@color/colorPrimaryDark">
 				app:layout_constraintLeft_toRightOf="@id/programTypeTextView"
 				app:layout_constraintBottom_toBottomOf="@id/programTypeTextView"
 				android:layout_marginLeft="5dp"
-				tools:text="blablalablabla"/>
+				android:layout_marginTop="10dp"/>
 		<TextView
 				android:id="@+id/programIDTextView"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
 				app:layout_constraintTop_toBottomOf="@id/programTypeTextView"
 				android:textStyle="bold"
-				android:text="ProgramID:"/>
+				android:text="@string/programid"/>
 		<TextView
 				android:id="@+id/programID"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
 				app:layout_constraintLeft_toRightOf="@id/programIDTextView"
 				app:layout_constraintBottom_toBottomOf="@id/programIDTextView"
-				android:layout_marginLeft="5dp"
-				tools:text="blablalablabla"/>
+				android:layout_marginLeft="5dp"/>
 		<TextView
 				android:id="@+id/serviceIDTextView"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
 				app:layout_constraintTop_toBottomOf="@id/programIDTextView"
 				android:textStyle="bold"
-				android:text="ServiceID:"/>
+				android:text="@string/serviceid"/>
 		<TextView
 				android:id="@+id/serviceID"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				app:layout_constraintLeft_toRightOf="@id/serviceIDTextView"
+				android:layout_marginTop="10dp"
 				app:layout_constraintBottom_toBottomOf="@id/serviceIDTextView"
-				android:layout_marginLeft="5dp"
-				tools:text="blablalablabla"/>
+				android:layout_marginLeft="5dp"/>
+
 		<TextView
 				android:id="@+id/videoIDTextView"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
 				app:layout_constraintTop_toBottomOf="@id/serviceIDTextView"
 				android:textStyle="bold"
-				android:text="VideoID:"/>
+				android:text="@string/videoid"/>
 		<TextView
 				android:id="@+id/videoID"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
 				app:layout_constraintLeft_toRightOf="@id/videoIDTextView"
 				app:layout_constraintBottom_toBottomOf="@id/videoIDTextView"
-				android:layout_marginLeft="5dp"
-				tools:text="blablalablabla"/>
+				android:layout_marginLeft="5dp"/>
 	</android.support.constraint.ConstraintLayout>
-
 </android.support.design.widget.CoordinatorLayout>

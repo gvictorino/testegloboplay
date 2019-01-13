@@ -10,4 +10,5 @@ data class ProgramViewModel(
   var fullEpisode : Boolean = false,
   var serviceID : Int = 0,
   var programID : Int = 0,
-  var videoID : Int = 0)
+  var videoID : Int = 0,
+  var description : String = "")

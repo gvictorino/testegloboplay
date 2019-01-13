@@ -10,5 +10,6 @@ class Program(
     val programName : String = "",
     val favorites : Int = 0,
     val duration: String = "",
-    val thumb : String = ""
+    val thumb : String = "",
+    val description : String = ""
 )

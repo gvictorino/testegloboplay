@@ -16,11 +16,34 @@ class Navigator(var activity: Activity) {
         activity.finish()
     }
 
-    fun goToProgramDetails(activity: Activity, programID: Int, programName: String, thumb: String, trasitionView: View?) {
-        val intent = Intent(activity, ProgramDetailsActivity::class.java)
-        intent.putExtra(ProgramDetailsActivity.PROGRAM_ID, programID)
-        intent.putExtra(ProgramDetailsActivity.PROGRAM_NAME, programName)
-        intent.putExtra(ProgramDetailsActivity.PROGRAM_THUMB, thumb)
+    fun goToProgramDetails(activity: Activity,
+                           programID: Int,
+                           programName: String,
+                           thumb: String,
+                           serviceID : Int,
+                           videoID : Int,
+                           programType : String,
+                           kind : String,
+                           fullEpisode : Boolean,
+                           favorites : Int,
+                           duration: String,
+                           description : String,
+                           trasitionView: View?) {
+
+        val intent = Intent(activity, ProgramDetailsActivity::class.java).apply {
+            putExtra(ProgramDetailsActivity.PROGRAM_ID, programID)
+            putExtra(ProgramDetailsActivity.PROGRAM_NAME, programName)
+            putExtra(ProgramDetailsActivity.PROGRAM_THUMB, thumb)
+            putExtra(ProgramDetailsActivity.PROGRAM_SERVICEID, serviceID)
+            putExtra(ProgramDetailsActivity.PROGRAM_VIDEOID, videoID)
+            putExtra(ProgramDetailsActivity.PROGRAM_TYPE,programType)
+            putExtra(ProgramDetailsActivity.PROGRAM_KIND, kind)
+            putExtra(ProgramDetailsActivity.PROGRAM_FULL_EPISODE,fullEpisode)
+            putExtra(ProgramDetailsActivity.PROGRAM_FAVORITES, favorites)
+            putExtra(ProgramDetailsActivity.PROGRAM_DURATION, duration)
+            putExtra(ProgramDetailsActivity.PROGRAM_DESCRIPTION, description)
+        }
+
         if (trasitionView != null) {
             val optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(
                 activity,

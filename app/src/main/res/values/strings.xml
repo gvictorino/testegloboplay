@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">teste-globoplay</string>
     <string name="transitionImage">thumb</string>
+	<string name="description">Descrição:</string>
+	<string name="duration">Duração:</string>
+	<string name="favorites">Favoritos:</string>
+	<string name="fullEpisode">Episódio Inteiro:</string>
+	<string name="kind">Kind:</string>
+	<string name="programType">Tipo de programa:</string>
+	<string name="programid">ProgramID:</string>
+	<string name="serviceid">ServiceID:</string>
+	<string name="videoid">VideoID:</string>
 </resources>
