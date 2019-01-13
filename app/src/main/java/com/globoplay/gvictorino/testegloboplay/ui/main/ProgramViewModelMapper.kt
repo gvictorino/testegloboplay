@@ -8,7 +8,13 @@ class ProgramViewModelMapper{
             thumb = program.thumb,
             favorites = program.favorites,
             duration = program.duration,
-            programName = program.programName
-        )
+            programName = program.programName,
+            kind = program.kind,
+            programType = program.programType,
+            fullEpisode = program.fullEpisode,
+            serviceID = program.serviceID,
+            videoID = program.videoID,
+            programID = program.programID
+       )
     }
 }

@@ -12,4 +12,10 @@ class ProgramDetailsActivity : Activity(){
 
     }
 
+
+    companion object {
+    val PROGRAM_ID = "ProgramID"
+    val PROGRAM_NAME = "ProgramName"
+    val PROGRAM_THUMB = "ProgramThumb"
+    }
 }

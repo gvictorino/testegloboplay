@@ -16,11 +16,11 @@ class Navigator(var activity: Activity) {
         activity.finish()
     }
 
-    fun goToProgramDetails(activity: Activity, videoID: Int, programName: String, thumb: String, trasitionView: View?) {
+    fun goToProgramDetails(activity: Activity, programID: Int, programName: String, thumb: String, trasitionView: View?) {
         val intent = Intent(activity, ProgramDetailsActivity::class.java)
-        // intent.putExtra(ProgramDetailsActivity.SPECIAL_ID, id)
-        // intent.putExtra(ProgramDetailsActivity.SPECIAL_NAME, name)
-        //intent.putExtra(ProgramDetailsActivity.SPECIAL_IMG, img)
+        intent.putExtra(ProgramDetailsActivity.PROGRAM_ID, programID)
+        intent.putExtra(ProgramDetailsActivity.PROGRAM_NAME, programName)
+        intent.putExtra(ProgramDetailsActivity.PROGRAM_THUMB, thumb)
         if (trasitionView != null) {
             val optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(
                 activity,
