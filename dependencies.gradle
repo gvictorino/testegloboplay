@@ -1,0 +1,31 @@
+ext {
+    minVersion = 15
+    compileVersion = 27
+    codeVersion = 1
+    nameVersion = "1.0.0"
+
+    supportLibraryVersion = "27.1.1"
+    glideVersion = "4.8.0"
+
+    kotLin = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    design = "com.android.support:design:${supportLibraryVersion}"
+    appCompat = "com.android.support:appcompat-v7:${supportLibraryVersion}"
+    support = "com.android.support:support-v4:${supportLibraryVersion}"
+    cardview = "com.android.support:cardview-v7:${supportLibraryVersion}"
+    supportTransitions = "com.android.support:transition:${supportLibraryVersion}"
+    constraintLayout = "com.android.support.constraint:constraint-layout:1.1.1"
+    recycleView = "com.android.support:recyclerview-v7:27.1.1"
+
+    retrofit = "com.squareup.retrofit2:retrofit:2.4.0"
+    retrofitConverter = "com.squareup.retrofit2:converter-gson:2.4.0"
+
+    glide = "com.github.bumptech.glide:glide:${glideVersion}"
+    glideAnnotation = "com.github.bumptech.glide:compiler:${glideVersion}"
+
+    multidex = "com.android.support:multidex:1.0.3"
+
+    jUnit = "junit:junit:4.12"
+    mockito = "org.mockito:mockito-core:2.10.0"
+}
+
+
